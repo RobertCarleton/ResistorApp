@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <!-- Display Text -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resistor Value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <!-- Band Buttons in Horizontal Row -->
+    <LinearLayout
+        android:id="@+id/bandButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <Button
+        android:id="@+id/buttonBand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color_primary"
+        android:onClick="doBand1"
+        android:text="Band 1"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonBand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color_secondary"
+        android:onClick="doBand2"
+        android:text="Band 2"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/buttonBand3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color_tertiary"
+        android:onClick="doBand3"
+        android:text="Band 3"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="16dp" />
+
+        <Button
+            android:id="@+id/buttonTolerance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color_accent"
+            android:onClick="doTolerance"
+            android:text="Tolerance"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Color Buttons in a Grid Layout -->
+    <GridLayout
+        android:id="@+id/colorButtonsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="4"
+        android:rowCount="3"
+        app:layout_constraintTop_toBottomOf="@id/bandButtonsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- First Row of Colors -->
+        <Button
+            android:id="@+id/buttonBlack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#000000"
+            android:onClick="doBlack"
+            android:text="Black"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonBrown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#A52A2A"
+            android:onClick="doBrown"
+            android:text="Brown"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonRed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#F44336"
+            android:onClick="doRed"
+            android:text="Red"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonOrange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FFA500"
+            android:onClick="doOrange"
+            android:text="Orange"
+            android:textColor="@android:color/black" />
+
+        <!-- Second Row of Colors -->
+        <Button
+            android:id="@+id/buttonYellow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FFFF00"
+            android:onClick="doYellow"
+            android:text="Yellow"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/buttonGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#008000"
+            android:onClick="doGreen"
+            android:text="Green"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonBlue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0000FF"
+            android:onClick="doBlue"
+            android:text="Blue"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonViolet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#8A2BE2"
+            android:onClick="doViolet"
+            android:text="Violet"
+            android:textColor="@android:color/white" />
+
+        <!-- Third Row of Colors -->
+        <Button
+            android:id="@+id/buttonGrey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:onClick="doGrey"
+            android:text="Grey"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="doWhite"
+            android:text="White"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/buttonGold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FFD700"
+            android:onClick="doGold"
+            android:text="Gold"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/buttonSilver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#C0C0C0"
+            android:onClick="doSilver"
+            android:text="Silver"
+            android:textColor="@android:color/black" />
+    </GridLayout>
+
+    <!-- Calculate and Reset Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/colorButtonsGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:backgroundTint="@color/button_color_primary"
+            android:textColor="@android:color/white"
+            android:onClick="doCalculate"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color_secondary"
+            android:onClick="doReset"
+            android:text="Reset"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
